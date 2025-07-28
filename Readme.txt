@@ -14,6 +14,9 @@ pip install "fastapi[all]"
 uvicorn main:app --reload
 
 
+## Used pydantic for setting up schema/data validation
+
+
 ## GIT commands
 git init
 git status
