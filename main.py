@@ -89,3 +89,6 @@ def update_post(id: int, post: Post):
     post_dict['id'] = id # Add the id into the dictionary
     my_posts[index] = post_dict # Update that specific spot in the array
     return {"data": post_dict}
+
+
+# Adding a line
