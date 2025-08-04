@@ -50,13 +50,11 @@ def create_posts(post: Post):
     my_posts.append(post_dict)
     return {"data": post_dict}
 
-
 ## GETTING THE LATEST POST
 @app.get("/posts/latest")
 def get_latest_post():
     post = my_posts[len(my_posts)-1]
     return {"detail": post}
-
 
 ## GETTING AN INDIVIDUAL POST
 @app.get("/posts/{id}")  
@@ -68,7 +66,6 @@ def get_post(id: int):   ## storing the response code I get in 'response' var
                             detail=f"Post with ID {id} does not exist")
     return {"post_detail": post}
 
-    
 ## DELETING A POST
 @app.delete("/posts/{id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_post(id: int):
@@ -80,7 +77,6 @@ def delete_post(id: int):
     my_posts.pop(index)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
     
-
 ## UPDATING A POST
 @app.put("/posts/{id}")
 def update_post(id: int, post: Post):
@@ -93,3 +89,6 @@ def update_post(id: int, post: Post):
     post_dict['id'] = id # Add the id into the dictionary
     my_posts[index] = post_dict # Update that specific spot in the array
     return {"data": post_dict}
+
+
+# Adding a line
