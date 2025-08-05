@@ -67,7 +67,6 @@ git status
 git commit -m "your commit name"
 git branch -M main
 git remote add origin https://github.com/anirbanbasu33/FASTAPI.git
-git push -u origin main
 
 
 
